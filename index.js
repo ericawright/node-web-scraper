@@ -1,7 +1,6 @@
 var request = require('request');
 var cheerio = require('cheerio');
 var path = require('path');
-var fs = require('fs');
 var csv = require('fast-csv'); 
 
 var csvStream = csv.createWriteStream({headers: true}),
