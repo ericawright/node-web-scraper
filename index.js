@@ -7,8 +7,11 @@ request('http://substack.net/images/', function(error, response, body){
     return;
   }
   var $ = cheerio.load(body);
-    $('a').each(function(i, element){
-      console.log($(this).text());
+    $('tr').each(function(i, element){
+      var url = 'http://substack.net/images' + $(this).find('a').attr('href')
+      // var permissions = $(this).nth-child(2)
+
+     console.log($(this).children(':nth-child(1)').text());
     });
   // console.log(body);
 });
